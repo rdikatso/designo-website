@@ -1,5 +1,14 @@
 <template>
   <div>
-    Hello Nuxt
+   <NuxtLayout>
+    <NuxtPage />
+   </NuxtLayout>
   </div>
 </template>
+<script setup>
+useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - Designo` : 'Designo';
+  }
+})
+</script>
