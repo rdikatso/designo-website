@@ -31,8 +31,31 @@
                 </div>
             </nav>
         </header>
+        <div class="container">
+            <div class="hero-img-wrapper">
+               <div class="row w-100">
+                <div class="col-md-6 hero-text d-flex flex-column">
+                    <h2>
+                        Award-winning custom designs and digital branding solutions
+                    </h2>
+                    <p>
+                        With over 10 years in the industry, we are experienced in creating fully responsive websites,
+                        app design and engaging brand experiences. Find out more about our services.
+                    </p>
+                    <CustomButton link="/our-company">Learn More</CustomButton>
+                </div>
+                <div class="col-md-6 hero-img-container">
+                    <img src="/home/desktop/image-hero-phone.png" alt="Description of image" class="img-fluid">
+                </div>
+               </div>
+               <div class="hero-svg-layer">
+                <svg width="640" height="639" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"><stop stop-color="#5D0202" stop-opacity="0" offset="0%"/><stop stop-color="#5D0202" stop-opacity=".498" offset="100%"/></linearGradient></defs><circle fill="url(#a)" transform="matrix(0 -1 -1 0 640 640)" cx="320" cy="320" r="320" fill-rule="evenodd" opacity=".309"/></svg>
+               </div>
+            </div>
+        </div>
 </template>
 <script setup>
+import CustomButton from '@/components/CustomButton.vue';
 
 useHead({
     title: null
@@ -59,5 +82,37 @@ onMounted(() => {
     font-weight: 400;
     text-transform: uppercase;
 }
+.hero-img-wrapper{
+    position: relative;
+    height: 600px;
+    border-radius: 15px;
+    background-color: #E7816B;
+    display: flex;
+    padding: 0rem 6rem;;
+    color: #fff;
+    overflow: hidden;
+    
+}
+.hero-img-wrapper {
+    h2 {
+        font-size: 3rem;
+    }
+    p{
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.hero-text{
+ padding-top: 8rem;
+}
+.hero-svg-layer{
+    position: absolute;
+    height: auto;
+    top: 0;
+    right: 0;
+}
+
+
 
 </style>
