@@ -68,62 +68,16 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid footer-wrapper">
-            <footer class="container">
-                <div class="footer">
-                    <nuxt-link class="logo-container" to="/">
-                        <img src="/designo-logo-white.png" alt="Designo Logo" class="mall-logo">
-                    </nuxt-link>
-                    <ul class="footer-links">
-                        <li class="footer-item">
-                            <nuxt-link class="footer-link" to="/our-company">Our Company</nuxt-link>
-                        </li>
-                        <li class="footer-item">
-                            <nuxt-link class="footer-link" to="/location">Locations</nuxt-link>
-                        </li>
-                        <li class="footer-item">
-                            <nuxt-link class="footer-link" to="/contact">Contact</nuxt-link>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-address row">
-                    <div class="address col-md-5">
-                        <p class="bold-text">Designo Central Office</p>
-                        <p>3886 Wellington Street</p>
-                        <p>Toronto, Ontario M9C 3J5</p>
-                    </div>
-                    <div class="contact-us col-md-4 bold-text">
-                        <p>Contact us</p>
-                        <p> P : +1 253-863-8967</p>
-                        <p>M : contact@designo.co</p>
-                    </div>
-                    <div class="social-media-links col-md-3 d-flex justify-content-end">
-                        <div class="icon">
-                            <font-awesome-icon :icon="['fab', 'square-facebook']" />
-                        </div>
-                        <div class="icon">
-                            <font-awesome-icon :icon="['fab', 'youtube']" />
-                        </div>
-                        <div class="icon">
-                            <font-awesome-icon :icon="['fab', 'square-x-twitter']" />
-                        </div>
-                        <div class="icon">
-                            <font-awesome-icon :icon="['fab', 'pinterest']" />
-                        </div>
-                        <div class="icon">
-                            <font-awesome-icon :icon="['fab', 'instagram']" />
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-        </div>
+    <FooterComponent />
+   
 
 </template>
 <script setup>
+
 import CustomButton from '@/components/CustomButton.vue';
 import Navigation from '@/components/Navigation.vue';
 import FeaturedItems from '@/components/FeaturedItems.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 useHead({
     title: null
@@ -236,90 +190,4 @@ useHead({
         text-align: center;
     }
 }
-.footer-wrapper {
-    background-color: black;
-    margin-top: 6rem;
-    padding: 6rem 0 3rem 0;
-}
-footer {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #fff;
-    .bold-text {
-        font-weight: 500;
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-links {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    .footer-item{
-        margin: 0.5rem 0;
-    }
-    .footer-link {
-        text-decoration: none;
-        color: #fff;
-    }
-    .logo-container {
-        img {
-            max-width: 200px;
-        }
-    }
-    
-}
-.footer-address {
-    text-transform: none;
-    border-top: 1px solid #ccc;
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
-    .address, .contact-us {
-        p {
-            margin-bottom: 0.25rem;
-        }
-    }
-}
-.social-media-links {
-    align-items: end;
-    .icon {
-        margin-left: 1rem;
-    }
-}
-
-@media (min-width: 769px){
-    footer {
-        // display: flex;
-        // justify-content: space-around;
-        .footer {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .footer-links {
-            flex-direction: row;
-            
-        }
-        .footer-item {
-            margin: 0 1rem;
-        }
-
-        .social-media-links {
-            align-items: center !important;
-        }
-    }
-   
-}
-
 </style>
