@@ -97,7 +97,8 @@
 
   .chevron-icon {
     margin-left: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: #E7816B;
   }
  }
 

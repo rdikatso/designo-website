@@ -2,7 +2,7 @@
     <div class="container-fluid footer-wrapper">
         <div class="container newsletter">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 newsletter-desc">
                     <p class="newsletter-header">
                         Let's talk about <br /> your project
                     </p>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-lg-6 newsletter-button">
                     <div>
-                        <CustomButton link="/our-company">Learn More</CustomButton>
+                        <CustomButton link="/our-company">Get in Touch</CustomButton>
                     </div>
                 </div>
             </div>
@@ -169,22 +169,56 @@ footer {
     }
 }
 @media (min-width: 768px) and (max-width: 1024px){
+    footer{
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+        }
+        .logo-container {
+            border-bottom: none;
+            width: auto;
+            padding-bottom: 0;
+        }
+        .footer-links {
+            flex-direction: row;
+            padding-top: 0;
+            margin-left: 1rem;
+        }
+        .footer-item {
+            margin: 0.5rem 1rem
+        }
+    }
+    .footer-address {
+        border-top: 1px solid #ccc;
+        .address, .contact-us {
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
     
 }
-@media (min-width: 768px){
+@media (min-width: 1025px){
     .newsletter {
         top: -45%;
+        padding: 3rem 6rem;
+        .newsletter-desc {
+            text-align: left;
+        }
         .newsletter-header {
             font-size: 2.5rem;
         }
         .newsletter-button {
+            justify-content: flex-end;
             margin-top: 20px;
         } 
     }
     footer {
+        margin-top: 75px;
         .footer {
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 0;
         }
         .logo-container {
             width: auto;
