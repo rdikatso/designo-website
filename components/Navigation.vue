@@ -1,6 +1,6 @@
 <template>
       <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
                 <div class="container">
                     <nuxt-link class="navbar-brand logo-container" to="/">
                        <img src="/designo-logo.png" alt="Designo Logo" class="mall-logo">
@@ -45,6 +45,8 @@
 <style scoped lang="scss">
     .navbar{
         padding: 50px 0 50px 0;
+        background-color: white;
+        z-index:1000;
     }
     .mall-logo {
         max-width: 200px;

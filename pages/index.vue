@@ -96,6 +96,7 @@ useHead({
   padding: 1rem;
   color: #fff;
   overflow: hidden;
+  margin-top: 10px;
 }
 .hero-img-wrapper h2 {
   font-size: 1.5rem;
