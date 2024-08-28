@@ -1,7 +1,7 @@
 <template>
     <div class="featured-section">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <div class="featured-item main-content" :class="{ mobile: isMobile }" style="background-image: url(/home/desktop/image-web-design-small.jpg)">
                 <div class="content">
                     <h3>Web Design</h3>
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="featured-item" :class="{ mobile: isMobile }" style="background-image: url(/home/desktop/image-app-design.jpg)">
             <div class="content">
               <h3>App Design</h3>
@@ -54,8 +54,9 @@
     window.removeEventListener('resize', checkScreenSize);
   });
   </script>
-  <style scoped>
+  <style scoped lang="scss">
  .featured-section {
+    letter-spacing: 0.25em;
     margin-top: 4rem;
     .featured-item {
         background-size: cover;
@@ -68,17 +69,22 @@
         border-radius: 15px;
     }
     .content {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 1rem;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 1rem;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      border-radius: 15px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(231, 129, 107, 0.7);
+      }
     }
 
     h3 {
@@ -93,6 +99,7 @@
     margin-top: 0.5rem;
     color: white;
     text-decoration: none;
+    text-transform: uppercase;
   }
 
   .chevron-icon {
@@ -102,11 +109,14 @@
   }
  }
 
- @media screen and (min-width: 678px){
+ @media screen and (min-width: 992px){
     .featured-section {
-        .main-content {
-            height: calc(600px + 1rem);
-        }
+      .main-content {
+          height: calc(600px + 1rem);
+      }
+      h3 {
+        font-size: 2.5rem;
+      }
     }
   
   } 

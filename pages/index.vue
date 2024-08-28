@@ -28,7 +28,8 @@
             <div class="row descriptive-items">
                 <div class="descriptive-item d-flex flex-column justify-content-center align-items-center">
                     <div class="image-wrapper">
-                        <img src="/home/desktop/illustration-passionate.svg"/>
+                        <img src="/home/desktop/passionate-background.svg" alt="background svg" class="background-img">
+                        <img src="/home/desktop/illustration-passionate.svg" class="main-img"/>
                     </div>
                     <div class="content">
                         <h3 class="content-title">
@@ -41,7 +42,8 @@
                 </div>
                 <div class="descriptive-item d-flex flex-column justify-content-center align-items-center">
                     <div class="image-wrapper">
-                     <img src="/home/desktop/illustration-resourceful.svg"/>
+                        <img src="/home/desktop/resourceful-background.svg" alt="background svg" class="background-img">
+                        <img src="/home/desktop/illustration-resourceful.svg"/>
                     </div>
                     <div class="content">
                         <h3 class="content-title">
@@ -54,7 +56,8 @@
                 </div>
                 <div class="descriptive-item d-flex flex-column justify-content-center align-items-center">
                     <div class="image-wrapper">
-                     <img src="/home/desktop/illustration-friendly.svg"/>
+                        <img src="/home/desktop/friendly-background.svg" alt="background svg" class="background-img">
+                         <img src="/home/desktop/illustration-friendly.svg"/>
                     </div>
                     <div class="content">
                         <h3 class="content-title">
@@ -130,6 +133,23 @@ useHead({
     flex-direction: column;
     align-items: center;
 }
+.image-wrapper {
+    position: relative;
+}
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+.main-img {
+    position: relative;
+    z-index: 1; 
+    width: 100%; 
+    height: auto; 
+}
 
 @media (min-width: 769px){
     .hero-img-wrapper {
@@ -164,6 +184,11 @@ useHead({
 
     .content {
         text-align: center;
+
+        .content-title {
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+        }
     }
 }
 
@@ -188,6 +213,15 @@ useHead({
     .content {
         align-items: flex-start;
         text-align: center;
+        margin-top: 3rem;
+
+        .content-title {
+            text-transform: uppercase;
+        }
+
+        .content-desc {
+            padding-top: 3rem;
+        }
     }
 }
 </style>

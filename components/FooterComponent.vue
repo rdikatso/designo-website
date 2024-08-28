@@ -43,7 +43,7 @@
                     <p>Toronto, Ontario M9C 3J5</p>
                 </div>
                 <div class="contact-us col-md-4 bold-text">
-                    <p>Contact us</p>
+                    <p>Contact us(Central Office)</p>
                     <p> P : +1 253-863-8967</p>
                     <p>M : contact@designo.co</p>
                 </div>
@@ -143,6 +143,7 @@ footer {
     align-items: end;
     .icon {
         margin-left: 1rem;
+        color: #E7816B;
     }
 }
 .newsletter {

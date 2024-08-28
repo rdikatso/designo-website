@@ -22,7 +22,7 @@ const colorClass = computed(() => {
 })
 
 </script>
-<style scoped>
+<style scoped lang="scss">
     .custom-btn {
         padding: 0.5rem 1rem;
         border-radius: 0.25rem;
@@ -30,7 +30,12 @@ const colorClass = computed(() => {
         text-align: center;
         display: inline-block;
         max-width: fit-content;
-        transition: background-color 0.3s;
+        transition: 0.3s;
+
+        &:hover {
+           background-color: rgba(255, 255, 255, 0.5); 
+           color: #ffffff;
+        }
     }
     .custom-btn-default {
         background-color: #ffffff; /* Default color */
@@ -38,18 +43,18 @@ const colorClass = computed(() => {
         text-transform: uppercase;
     }
     .custom-btn-red {
-  background-color: #ff0000;
-  color: #ffffff;
-}
+        background-color: #ff0000;
+        color: #ffffff;
+    }
 
-.custom-btn-green {
-  background-color: #00ff00;
-  color: #ffffff;
-}
+    .custom-btn-green {
+    background-color: #00ff00;
+    color: #ffffff;
+    }
 
-.custom-btn-blue {
-  background-color: #0000ff;
-  color: #ffffff;
-}
+    .custom-btn-blue {
+    background-color: #0000ff;
+    color: #ffffff;
+    }
 
 </style>

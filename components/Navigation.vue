@@ -53,5 +53,10 @@
         font-family: "Jost", sans-serif;
         font-weight: 400;
         text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    .nav-item:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
     }
 </style>
