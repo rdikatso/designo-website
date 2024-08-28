@@ -1,5 +1,4 @@
 <template>
-    <Navigation />
     <div class="container">
         <div class="hero-img-wrapper">
             <div class="row">
@@ -71,16 +70,11 @@
             </div>
         </div>
     </div>
-    <FooterComponent />
-   
-
 </template>
 <script setup>
 
 import CustomButton from '@/components/CustomButton.vue';
-import Navigation from '@/components/Navigation.vue';
 import FeaturedItems from '@/components/FeaturedItems.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
 
 useHead({
     title: null
