@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid footer-wrapper">
         <div class="container newsletter">
-            <div class="row">
+            <div class="row newsletter-background">
                 <div class="col-lg-6 newsletter-desc">
                     <p class="newsletter-header">
                         Let's talk about <br /> your project
@@ -147,6 +147,10 @@ footer {
     }
 }
 .newsletter {
+    background-image: url('/newsletter-background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     top: -25%;
     left: 0;
@@ -197,6 +201,9 @@ footer {
             margin-bottom: 0;
         }
     }
+    .newsletter-background-img {
+        top: -45px;
+    }
     
 }
 @media (min-width: 1025px){
@@ -245,6 +252,11 @@ footer {
         .social-media-links {
             justify-content: end;
         }
+    }
+    .newsletter-background-img {
+        top: -45px;
+        right: 0;
+        left: auto;
     }
   
 }
