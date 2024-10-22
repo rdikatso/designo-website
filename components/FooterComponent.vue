@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid footer-wrapper">
         <div class="container newsletter">
-            <div class="row newsletter-background">
+            <div class="row">
                 <div class="col-lg-6 newsletter-desc">
                     <p class="newsletter-header">
                         Let's talk about <br /> your project
@@ -210,6 +210,7 @@ footer {
     .newsletter {
         top: -45%;
         padding: 3rem 6rem;
+        max-width: 1320px;
         .newsletter-desc {
             text-align: left;
         }
@@ -253,11 +254,5 @@ footer {
             justify-content: end;
         }
     }
-    .newsletter-background-img {
-        top: -45px;
-        right: 0;
-        left: auto;
-    }
-  
 }
 </style>
