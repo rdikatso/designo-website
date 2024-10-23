@@ -2,6 +2,11 @@
     <div class="page-banner" :style="{ backgroundImage: `url(${backgroundImage})`}">
       <h1>{{ title }}</h1>
       <p class="banner-desc">{{ description }}</p>
+      <div class="container">
+        <div class="row">
+            
+        </div>
+      </div>
     </div>
 </template>
 <script setup>
