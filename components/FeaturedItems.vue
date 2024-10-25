@@ -111,8 +111,8 @@
 
  @media screen and (min-width: 992px){
     .featured-section {
-      .main-content {
-          height: calc(600px + 1rem);
+      .featured-item.main-content  {
+          height: calc(600px + 1rem) !important;
       }
       h3 {
         font-size: 2.5rem;
