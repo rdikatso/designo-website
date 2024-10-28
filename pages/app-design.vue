@@ -1,8 +1,6 @@
 <template>
     <div class="container">
         <PageBanner :title="pageTitle" :description="pageDescription"/>
-        Page Banner With Image
-        <PageBannerWithImage  :title="pageTitle" :description="pageDescription" />
         <div class="page-content">
           <div>
             <div class="row">
@@ -48,8 +46,6 @@
 </template>
 <script setup>
 import PageBanner from '@/components/PageBanner.vue';
-import PageBannerWithImage from '@/components/PageBannerWithImage.vue'
-
 const pageTitle = ref('App Design');
 const pageDescription = ref(
   'We build websites that serve as powerful marketing tools and bring memorable brand experiences.'

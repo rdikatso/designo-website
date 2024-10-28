@@ -46,6 +46,14 @@ const colorClass = computed(() => {
         background-color: #ff0000;
         color: #ffffff;
     }
+    .custom-btn-orange {
+        background-color: #E7816B;
+        color: #fff;
+
+        &:hover {
+            background-color: rgba(231, 129, 107, 0.5);
+        }
+    }
 
     .custom-btn-green {
     background-color: #00ff00;

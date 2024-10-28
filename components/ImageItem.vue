@@ -1,15 +1,14 @@
 <template>
     <div
-      class="page-banner-with-image"
-      :style="{ backgroundImage: `url(${backgroundImage})` }"
+      class="item-with-image"
     >
       <div class="">
         <div class="row">
-          <div v-if="rightImage" class="col-lg-5 image-content order-lg-2">
-            <img :src="rightImage" alt="Banner Image" />
+          <div v-if="image" :class="['col-lg-5 image-content', reverse ? 'order-lg-1' : 'order-lg-2']">
+            <img :src="image" alt="Banner Image" />
           </div>
-          <div class="col-lg-7 text-content order-lg-1">
-            <h1>{{ title }}</h1>
+          <div :class="['col-lg-7 text-content', reverse ?  'order-lg-2' : 'order-lg-1']">
+            <h1 class="banner-title">{{ title }}</h1>
             <p class="banner-desc">{{ description }}</p>
           </div>
         </div>
@@ -28,29 +27,30 @@
       type: String,
       required: true,
     },
-    backgroundImage: {
-      type: String,
-      default: "/newsletter-background.svg",
-    },
-    rightImage: {
+    image: {
       type: String,
       default: null,
     },
+    reverse : {
+        type: Boolean,
+        default: false,
+    }
   });
   </script>
   
   <style scoped>
-  .page-banner-with-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  .item-with-image {
     min-height: 250px;
     border-radius: 15px;
-    background-color: #e7816b;
-    color: #fff;
+    background-color: #FDF3F0;
+    color: #333136;
     display: flex;
     align-items: center;
     overflow: hidden;
+  }
+
+  .banner-title{
+    color: #E7816B;
   }
   
   .text-content {
@@ -67,10 +67,12 @@
   .image-content img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
   }
 
   @media (min-width: 1025px) {
+    .item-with-image {
+        max-height: 640px;
+    }
     .text-content {
         padding: 0 4rem;
     }
