@@ -1,11 +1,11 @@
 <template>
-    <div class="container margin-bottom-200">
+    <div class="container margin-bottom-50">
       <div class="row">
-        <div :class="['col-md-8', reverse ? 'order-md-2' : '']">
+        <div :class="['col-md-8',reverse ? 'order-md-2' : 'order-md-1', 'order-2']">
           <div class="location-detail">
             <h4 class="location-title">{{ location.title }}</h4>
             <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 location-address">
               <p class="fw-bold">{{ location.office_name }}</p>
               <p>{{ location.address }}</p>
               <p>{{ location.city }}, {{ location.province }} {{ location.postal_code }}</p>
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div :class="['col-md-4', reverse ? 'order-md-1' : '']">
+        <div :class="['col-md-4', reverse ? 'order-md-1' : 'order-md-2', 'order-1']">
           <div class="location-map">
             <LMap
               ref="map"
@@ -68,25 +68,43 @@ const zoom = ref(5)
 <style lang="scss" scoped>
 .location-detail{
   background-color: #FDF3F0;
-  height: 400px;
-  border-radius: 15px;
+  background-image: url('/locations-background.svg');
+  background-repeat: no-repeat;
   padding: 5rem 5rem;
+  height: 400px;
+  text-align: center;
 
   .location-title{
       color: #E7816B;
       line-height: 48px;   
       font-size: 2.5rem;
       margin-bottom: 20px;
-  }
+   }
 
-  p {
+    p {
       margin-bottom: 0;
-  }
+   }
+
+   .location-address {
+      margin-bottom: 20px;
+    }
 }
 .location-map {
   height: 400px;
   width: 100%;
-  border-radius: 15px;
   overflow: hidden;
+}
+
+@media (min-width: 769px){
+
+    .location-detail {
+        border-radius: 15px;
+        text-align: left;
+        height: 325px;
+    }
+    .location-map {
+        border-radius: 15px; 
+        height: 325px;
+    }
 }
 </style>

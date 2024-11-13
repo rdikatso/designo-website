@@ -1,52 +1,5 @@
 <template>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="location-detail">
-            <h4 class="location-title">Canada</h4>
-            <div class="row">
-            <div class="col-md-6">
-              <p class="fw-bold">Designo Central Office</p>
-              <p>3886 Wellington Street</p>
-              <p>Toronto, Ontario M9C 3J5</p>
-            </div>
-            <div class="col-md-6">
-              <p class="fw-bold">Contact</p>
-              <p>P: +253-863-8967</p>
-              <p>M: contact@designo.co</p>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="location-map">
-            <LMap
-              ref="map"
-              :zoom="zoom"
-              :center="[43.644009, -79.394539]"
-              :use-global-leaflet="false"
-              :leaflet-control="false"
-              style="height: 100%; width: 100%;"
-            >
-              <LTileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
-                layer-type="base"
-                name="OpenStreetMap"
-              />
-              <LMarker
-                :lat-lng="[43.644009, -79.394539]"
-                >
-                <LPopup>
-                    <span>Designo Central Office</span>
-                </LPopup>
-             </LMarker>
-            </LMap>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="margin-top-200">
+    <div>
         <LocationMap  v-for="(location, index) in locationData" :key="index" :location="location" :reverse="index % 2 !== 0"/>
     </div>
   </template>
@@ -78,6 +31,17 @@
         email: 'contact@designo.au',
         coordinates: [-33.8688, 151.2093],
     },
+    {
+        title: 'United Kingdom',
+        office_name: 'Designo UK Office',
+        address: '13 Colorado Way',
+        city: 'Rhyd-y-fro',
+        province: 'Wales',
+        postal_code: 'SA8 9GA',
+        phone: '+44 1234 567890',
+        email: 'contact@designo.uk',
+        coordinates: [51.6214, -3.9436],
+    }
 ]);
 
 
