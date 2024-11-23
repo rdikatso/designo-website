@@ -14,7 +14,8 @@ export default defineNuxtConfig({
   ],
 
   plugins: [
-    '~/plugins/fontawesome.js'
+    '~/plugins/fontawesome.js',
+    '~/plugins/vee-validate.js'
   ],
 
   modules: ["@nuxtjs/leaflet"]

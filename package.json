@@ -15,9 +15,13 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@nuxtjs/leaflet": "^1.2.3",
+    "@vee-validate/rules": "^4.14.7",
     "bootstrap": "^5.3.3",
+    "emailjs-com": "^3.2.0",
     "nuxt": "^3.12.3",
     "sass": "^1.77.6",
-    "vue": "latest"
+    "vee-validate": "^4.14.7",
+    "vue": "latest",
+    "yup": "^1.4.0"
   }
 }
