@@ -4,41 +4,11 @@
         <div class="margin-top-200 margin-bottom-40">
             <ImageItem  :title="talentTitle" :description="talentDescription" :image="talentImage" />
         </div>
-        <div class="row margin-top-200">
-            <div class="col-lg-4 descriptive-item d-flex flex-column justify-content-center align-items-center">
-                    <div class="image-wrapper">
-                        <img src="/home/desktop/friendly-background.svg" alt="background svg" class="background-img">
-                        <img src="/images/shared/desktop/illustration-canada.svg"/>
-                    </div>
-                    <h3 class="content-title">
-                        Canada
-                    </h3>
-                    <CustomButton link="/locations" color="orange" >See Location</CustomButton>
-            </div>
-            <div class="col-lg-4 descriptive-item d-flex flex-column justify-content-center align-items-center">
-                    <div class="image-wrapper">
-                        <img src="/home/desktop/friendly-background.svg" alt="background svg" class="background-img">
-                        <img src="/images/shared/desktop/illustration-united-kingdom.svg"/>
-                    </div>
-                    <h3 class="content-title">
-                        United Kingdom
-                    </h3>
-                    <CustomButton link="/locations" color="orange" >See Location</CustomButton>
-            </div>
-            <div class="col-lg-4 descriptive-item d-flex flex-column justify-content-center align-items-center">
-                    <div class="image-wrapper">
-                        <img src="/home/desktop/friendly-background.svg" alt="background svg" class="background-img">
-                        <img src="/images/shared/desktop/illustration-australia.svg"/>
-                    </div>
-                    <h3 class="content-title">
-                        Australia
-                    </h3>
-                    <CustomButton link="/locations" color="orange" >See Location</CustomButton>
-            </div>
-        </div>
+        <Locations />
         <div class="margin-top-200 margin-bottom-40">
             <ImageItem  :title="realDealTitle" :description="realDealDescription" :image="realDealImage" reverse="true" />
         </div>
+
         
     </div>
 
@@ -47,6 +17,7 @@
 import PageBannerWithImage from '@/components/PageBannerWithImage.vue';
 import ImageItem from '@/components/ImageItem.vue';
 import CustomButton from '@/components/CustomButton.vue';
+import DescriptiveItem from '@/components/DescriptiveItem.vue';
 
 const pageTitle = ref('About Us');
 const pageDescription = ref('Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.');
