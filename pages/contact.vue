@@ -15,7 +15,7 @@
                 <Form @submit="onSubmit">
                     <div class="form-item">
                         <label for="name">Name</label>
-                        <Field id="name" name="name" type="text" rules="required|min:3" placeholder="Enter your name" />
+                        <Field id="name" name="name" type="text" rules="required" placeholder="Enter your name" />
                         <ErrorMessage name="name" class="error-message"/>
                     </div>
                     <div class="form-item">
@@ -39,7 +39,7 @@
                         id="message"
                         name="message"
                         as="textarea"
-                        rules="required|min:10"
+                        rules="required"
                         placeholder="Enter your message"
                         />
                         <ErrorMessage name="message" class="error-message" />
@@ -49,8 +49,9 @@
                     </div>
                     
                 </Form>
-                <div v-if="emailStatus">
-                    <p>{{ emailStatus }}</p>
+                <div v-if="emailStatus || isSubmitting">
+                    <p v-if="isSubmitting">Sending email...</p>
+                    <p v-else>{{ emailStatus }}</p>
                 </div>
             </div>
         </div>
@@ -61,12 +62,44 @@
   </template>
   
   <script setup>
-  import { Form, Field, ErrorMessage } from 'vee-validate';
+  import { Form, Field, ErrorMessage, configure } from 'vee-validate';
   import emailjs from 'emailjs-com';
   import { ref } from 'vue';
   import Locations from '@/components/Locations.vue';
 
   const backgroundImage = '/contact-us-background-image.svg'
+
+  const dict = {
+    defaultMessage: (fieldName) => `${fieldName} is invalid.`,
+    custom: {
+        email: {
+        required: "Can't be empty",
+        email: 'Please enter a valid email address',
+        },
+        name: {
+        required: "Can't be empty",
+        min: ({ length }) => `Your name must be at least ${length} characters long.`,
+        },
+        message: {
+        required: "Can't be empty",
+        min: ({ length }) => `Message must be at least ${length} characters long.`,
+        },
+    },
+ };
+ 
+ configure({
+  generateMessage: ({ field, rule, value, values }) => {
+    const ruleName = typeof rule === 'string' ? rule : rule.name; 
+    const customMessages = dict.custom[field];
+
+    if (customMessages && customMessages[ruleName]) {
+      return typeof customMessages[ruleName] === 'function'
+        ? customMessages[ruleName](values)
+        : customMessages[ruleName];
+    }
+    return dict.defaultMessage(field);
+  },
+ });
 
   const serviceID = 'contact_service';
   const templateID = 'contact_form';
@@ -77,6 +110,7 @@
 
   async function onSubmit(values) {
     isSubmitting.value = true;
+    emailStatus.value = '';
     try {
         const response = await emailjs.send(
         serviceID,
@@ -183,7 +217,10 @@
       font-size: 0.875rem; 
       white-space: nowrap;
     }
-
-
+  }
+  @media (min-width: 1025px){
+    .form-container {
+        margin-bottom: 150px;
+    }
   }
   </style>

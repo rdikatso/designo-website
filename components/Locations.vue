@@ -1,5 +1,5 @@
 <template>
-    <div class="row margin-top-200">
+    <div class="row">
         <DescriptiveItem 
         v-for="(location, index) in locations"
         :key="index"
