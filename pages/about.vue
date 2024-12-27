@@ -4,7 +4,9 @@
         <div class="margin-top-200 margin-bottom-40">
             <ImageItem  :title="talentTitle" :description="talentDescription" :image="talentImage" />
         </div>
-        <Locations />
+        <div class="margin-top-200">
+            <Locations />
+        </div>
         <div class="margin-top-200 margin-bottom-40">
             <ImageItem  :title="realDealTitle" :description="realDealDescription" :image="realDealImage" reverse="true" />
         </div>

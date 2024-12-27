@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-lg-6 newsletter-button">
                     <div>
-                        <CustomButton link="/our-company">Get in Touch</CustomButton>
+                        <CustomButton link="/contact">Get in Touch</CustomButton>
                     </div>
                 </div>
             </div>
@@ -26,10 +26,10 @@
                 </div>
                 <ul class="footer-links">
                     <li class="footer-item">
-                        <nuxt-link class="footer-link" to="/our-company">Our Company</nuxt-link>
+                        <nuxt-link class="footer-link" to="/about">Our Company</nuxt-link>
                     </li>
                     <li class="footer-item">
-                        <nuxt-link class="footer-link" to="/location">Locations</nuxt-link>
+                        <nuxt-link class="footer-link" to="/locations">Locations</nuxt-link>
                     </li>
                     <li class="footer-item">
                         <nuxt-link class="footer-link" to="/contact">Contact</nuxt-link>
@@ -44,8 +44,8 @@
                 </div>
                 <div class="contact-us col-md-4 bold-text">
                     <p>Contact us(Central Office)</p>
-                    <p> P : +1 253-863-8967</p>
-                    <p>M : contact@designo.co</p>
+                    <p> P : <a href="tel:+1 253-863-8967">+1 253-863-8967</a></p>
+                    <p>M : <a href="mailto:contact@designo.co">contact@designo.co</a></p>
                 </div>
                 <div class="social-media-links col-md-3">
                     <div class="icon">
@@ -132,6 +132,16 @@ footer {
         margin-bottom: 40px;
         p {
             margin-bottom: 0.25rem;
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover{
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+            
         }
     }
     .social-media-links {

@@ -18,10 +18,10 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ms-auto">
                         <li class="nav-item active">
-                            <nuxt-link class="nav-link" to="/our-company">Our Company</nuxt-link>
+                            <nuxt-link class="nav-link" to="/about">Our Company</nuxt-link>
                         </li>
                         <li class="nav-item">
-                            <nuxt-link class="nav-link" to="/location">Locations</nuxt-link>
+                            <nuxt-link class="nav-link" to="/locations">Locations</nuxt-link>
                         </li>
                         <li class="nav-item">
                             <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
