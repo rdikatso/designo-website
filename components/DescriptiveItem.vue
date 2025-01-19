@@ -26,8 +26,12 @@ const props = defineProps({
     locationImage: {
         type: String,
         required: true
+    },
+    link: {
+        type: String,
     }
 })
+console.log("PROPS", props)
 </script>
 <style lang="scss" scoped>
     .descriptive-item {

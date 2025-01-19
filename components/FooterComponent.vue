@@ -48,21 +48,31 @@
                     <p>M : <a href="mailto:contact@designo.co">contact@designo.co</a></p>
                 </div>
                 <div class="social-media-links col-md-3">
-                    <div class="icon">
-                        <font-awesome-icon :icon="['fab', 'square-facebook']" />
-                    </div>
-                    <div class="icon">
-                        <font-awesome-icon :icon="['fab', 'youtube']" />
-                    </div>
-                    <div class="icon">
-                        <font-awesome-icon :icon="['fab', 'square-x-twitter']" />
-                    </div>
-                    <div class="icon">
-                        <font-awesome-icon :icon="['fab', 'pinterest']" />
-                    </div>
-                    <div class="icon">
-                        <font-awesome-icon :icon="['fab', 'instagram']" />
-                    </div>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <div class="icon">
+                            <font-awesome-icon :icon="['fab', 'square-facebook']" />
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <div class="icon">
+                            <font-awesome-icon :icon="['fab', 'youtube']" />  
+                        </div>
+                    </a>
+                    <a href="https://x.com/" target="_blank">
+                        <div class="icon">
+                            <font-awesome-icon :icon="['fab', 'square-x-twitter']" />
+                        </div>
+                    </a>
+                    <a href="https://ca.pinterest.com" target="_blank">
+                        <div class="icon">
+                            <font-awesome-icon :icon="['fab', 'pinterest']" />
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <div class="icon">
+                            <font-awesome-icon :icon="['fab', 'instagram']" />
+                        </div>
+                    </a>
                 </div>
             </div>
         </footer>
