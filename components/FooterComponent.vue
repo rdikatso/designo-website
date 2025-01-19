@@ -116,6 +116,26 @@ footer {
     }
     .footer-item{
         margin: 0.5rem 0;
+        padding: 10px 0;
+        letter-spacing: 0.1em;
+        position: relative;
+        display: inline-block;
+    }
+    .footer-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform 0.2s ease;
+    }
+    .footer-item:hover::after {
+        width: 100%;
+        transform: translateX(-50%) scaleX(1);
     }
     .footer-link {
         text-decoration: none;
@@ -134,6 +154,7 @@ footer {
     }
     
 }
+
 .footer-address {
     text-transform: none;
     padding-top: 2.5rem;
