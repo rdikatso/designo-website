@@ -56,9 +56,23 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1em;
+        position: relative;
+        display: inline-block;
     }
-    .nav-item:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: #000;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform 0.2s ease;
+    }
+    .nav-item:hover::after {
+        width: 100%;
+        transform: translateX(-50%) scaleX(1);
     }
 </style>
