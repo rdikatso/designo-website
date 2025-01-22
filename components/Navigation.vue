@@ -75,4 +75,15 @@
         width: 100%;
         transform: translateX(-50%) scaleX(1);
     }
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-collapse {
+        background-color: #000;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    .nav-link {
+        color: #fff;
+    }
 </style>

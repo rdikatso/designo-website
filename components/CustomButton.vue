@@ -24,13 +24,14 @@ const colorClass = computed(() => {
 </script>
 <style scoped lang="scss">
     .custom-btn {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1rem;
         border-radius: 0.25rem;
         text-decoration: none;
         text-align: center;
         display: inline-block;
         max-width: fit-content;
         transition: 0.3s;
+        letter-spacing: 0.1em;
 
         &:hover {
            background-color: rgba(255, 255, 255, 0.5); 
