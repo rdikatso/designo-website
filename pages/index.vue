@@ -146,7 +146,7 @@ useHead({
     height: auto; 
 }
 
-@media (min-width: 769px){
+@media (min-width: 990px){
     .hero-img-wrapper {
         height: auto;
         max-height: 650px;

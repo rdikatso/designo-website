@@ -12,8 +12,11 @@
                         data-bs-target="#navbarNavDropdown" 
                         aria-controls="navbarNavDropdown" 
                         aria-expanded="false" 
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        aria-label="Toggle navigation"
+                        @click="toggleMenu"
+                        >
+                        <span v-if="!isExpanded" class="navbar-toggler-icon"></span>
+                        <font-awesome-icon v-else :icon="['fas', 'xmark']" class="icon-close" />
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ms-auto">
@@ -22,6 +25,9 @@
                         </li>
                         <li class="nav-item">
                             <nuxt-link class="nav-link" to="/locations">Locations</nuxt-link>
+                        </li>
+                        <li class="nav-item">
+                            <nuxt-link class="nav-link" to="/shop">Shop</nuxt-link>
                         </li>
                         <li class="nav-item">
                             <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
@@ -33,14 +39,14 @@
         </header>
 </template>
 <script setup>
-    onMounted(() => {
-    try {
-        const collapse = new $bs.Collapse('#navbarSupportedContent');
-        collapse.show()
-    }catch (e) {
-        console.log('Bootstrap error: ', e)
+    import { ref } from 'vue'
+
+    const isExpanded = ref(false);
+    
+    const toggleMenu = () => {
+        isExpanded.value = !isExpanded.value;
+        console.log("Toggle Menu...", isExpanded.value)
     }
-    });
 </script>
 <style scoped lang="scss">
     .navbar{
@@ -85,5 +91,24 @@
     }
     .nav-link {
         color: #fff;
+    }
+    .icon-close {
+        font-size: 1.5rem;
+    }
+    @media (min-width: 990px) {
+        .navbar {
+            padding: 20px 0 20px 0;
+        }
+    }
+
+    @media (min-width: 1025px){
+        .navbar-collapse {
+            background-color: #fff;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .nav-link {
+            color: #000;
+        }
     }
 </style>
